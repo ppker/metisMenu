@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-import pkg from './package.json' assert { type: "json" };
+import pkg from './package.json' with { type: "json" };
 
 const banner = `/*!
 * ${pkg.name} ${pkg.homepage}
@@ -12,29 +12,30 @@ const banner = `/*!
 const production = !process.env.ROLLUP_WATCH;
 
 export default [
-  {
-    input: 'src/index.js',
-    external: ['jquery'],
-    output: [
-      {
-        name: 'metisMenu',
-        banner,
-        globals: {
-          jquery: '$',
-        },
-        file: production ? pkg.main : 'demo/assets/js/metisMenu.js',
-        format: 'umd',
-        sourcemap: true,
-      },
-      {
-        file: pkg.module,
-        banner,
-        format: 'esm',
-        sourcemap: true,
-      },
-    ],
-    plugins: [
-      resolve(),
-    ],
-  },
+    {
+        input: 'src/index.js',
+        external: ['jquery'],
+        output: [
+            {
+                name: 'metisMenu',
+                banner,
+                globals: {
+                    jquery: '$',
+                },
+                file: production ? pkg.main : 'docs/assets/js/metisMenu.js',
+                exports: "named",
+                format: 'umd',
+                sourcemap: true,
+            },
+            {
+                file: pkg.module,
+                banner,
+                format: 'esm',
+                sourcemap: true,
+            },
+        ],
+        plugins: [
+            resolve(),
+        ],
+    },
 ];

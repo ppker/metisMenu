@@ -115,22 +115,22 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="https://onokumus.com/chaldene" target="_blank">Chaldene Admin</a>
+                      <a class="dropdown-item" href="https://github.com/onokumus/chaldene" target="_blank">Chaldene Admin</a>
                     </li>
                     <li>
     
-                      <a class="dropdown-item" href="https://onokumus.com/elektron" target="_blank">Elektron Admin</a>
+                      <a class="dropdown-item" href="https://github.com/onokumus/elektron" target="_blank">Elektron Admin</a>
                     </li>
                     <li>
     
-                      <a class="dropdown-item" href="https://onokumus.com/twbuttons/" target="_blank">twbuttons</a>
+                      <a class="dropdown-item" href="https://github.com/onokumus/twbuttons/" target="_blank">twbuttons</a>
                     </li>
                   </ul>
                 </li>
     
     
                 <li class="nav-item">
-                  <a class="nav-link" href="https://onokumus.com" target="_blank">onokumus</a>
+                  <a class="nav-link" href="https://github.com/onokumus/" target="_blank">onokumus</a>
                 </li>
               </ul>
             </div>
@@ -205,10 +205,13 @@
                   <h2 id="getting-started">Getting started</h2>
                   <h3 id="install">Install</h3>
                   <p>Install with <a href="https://www.npmjs.com/">npm</a>:</p>
-                  <pre><code class="lang-sh">$ npm <span class="hljs-keyword">install</span> <span class="hljs-comment">--save metismenu</span>
+                  <pre><code class="lang-sh">$ npm <span class="hljs-keyword">install</span> metismenu
                       </code></pre>
                   <p>Install with <a href="https://yarnpkg.com">yarn</a>:</p>
-                  <pre><code class="lang-sh">$ yarn <span class="hljs-keyword">add</span><span class="bash"> metismenu</span>
+                  <pre><code class="lang-sh">$ yarn <span class="hljs-keyword">add</span> metismenu
+                      </code></pre>
+                   <p>Install with <a href="https://bun.sh">bun</a>:</p>
+                  <pre><code class="lang-sh">$ bun <span class="hljs-keyword">add</span> metismenu
                       </code></pre>
                   <p>Install with <a href="https://getcomposer.org/">composer</a></p>
                   <pre><code class="lang-sh">$ composer <span class="hljs-keyword">require</span> onokumus/<span class="hljs-symbol">metismenu:</span>dev-master
@@ -237,6 +240,17 @@
                       <span class="hljs-comment">&lt;!-- OR --&gt;</span>
                       <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/metismenu"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
                       </code></pre>
+                    </li>
+                    <li>
+                      <p>Using with ESM/Bundler (Vite, Webpack, Rollup)</p>
+                      <pre><code class="lang-javascript"><span class="hljs-keyword">import</span> $ <span class="hljs-keyword">from</span> <span class="hljs-string">'jquery'</span>;
+                      <span class="hljs-keyword">import</span> MetisMenu <span class="hljs-keyword">from</span> <span class="hljs-string">'metismenu'</span>;
+                      <span class="hljs-comment">// OR</span>
+                      <span class="hljs-keyword">import</span> { MetisMenu } <span class="hljs-keyword">from</span> <span class="hljs-string">'metismenu'</span>;
+                      
+                      <span class="hljs-keyword">const</span> mm = <span class="hljs-keyword">new</span> MetisMenu(<span class="hljs-string">"#metismenu"</span>);
+                      <span class="hljs-comment">// OR</span>
+                      $(<span class="hljs-string">"#metismenu"</span>).metisMenu();</code></pre>
                     </li>
                     <li>
                       <p>Add id attribute to unordered list</p>

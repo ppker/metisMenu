@@ -35,13 +35,19 @@
 Install with [npm](https://www.npmjs.com/):
 
 ```sh
-npm install --save metismenu
+npm install metismenu
 ```
 
 Install with [yarn](https://yarnpkg.com):
 
 ```sh
 yarn add metismenu
+```
+
+Install with [bun](https://bun.sh/):
+
+```sh
+bun add metismenu
 ```
 
 Install with [composer](https://getcomposer.org/)
@@ -78,6 +84,19 @@ composer require onokumus/metismenu:dev-master
   <script src="https://unpkg.com/metismenu"></script>
   <!-- OR -->
   <script src="https://cdn.jsdelivr.net/npm/metismenu"></script>
+  ```
+
+1. Using with ESM/Bundler (Vite, Webpack, Rollup)
+
+  ```javascript
+  import $ from 'jquery';
+  import MetisMenu from 'metismenu';
+  // OR
+  import { MetisMenu } from 'metismenu';
+
+  const mm = new MetisMenu("#metismenu");
+  // OR
+  $("#metismenu").metisMenu();
   ```
 
 1. Add id attribute to unordered list
@@ -234,7 +253,7 @@ Default: `ul`
 
 ## Demo
 
-[http://mm.onokumus.com](http://mm.onokumus.com)
+[https://onokumus.github.io/metismenu/](https://onokumus.github.io/metismenu/)
 
 Contains a simple HTML file to demonstrate metisMenu plugin.
 
@@ -279,6 +298,7 @@ Please read the [contributing guide](.github/contributing.md) for advice on open
 
 |**DATE**      |**VERSION**   |**CHANGES**|
 |--------------|--------------|-----------|
+|2026-01-22    |v3.1.0        |Support jQuery 4 [#207](https://github.com/onokumus/metismenu/issues/207)|
 |2021-05-16    |v3.0.7        |sass support|
 |2020-03-22    |v3.0.6        |fix security vulnerabilities|
 |2019-12-28    |v3.0.5        |Fix dispose to be similar to init (adding event) [#184](https://github.com/onokumus/metismenu/pull/184)|
@@ -330,5 +350,5 @@ Please read the [contributing guide](.github/contributing.md) for advice on open
 
 ### License
 
-Copyright © 2021, [Osman Nuri Okumus](https://github.com/onokumus).
+Copyright © 2026, [Osman Nuri Okumus](https://github.com/onokumus).
 Released under the [MIT License](LICENSE).

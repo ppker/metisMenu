@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
-const Util = (($) => { // eslint-disable-line no-shadow
+const Util = (($) => {
   const TRANSITION_END = 'transitionend';
 
-  const Util = { // eslint-disable-line no-shadow
+  const Util = {
     TRANSITION_END: 'mmTransitionEnd',
 
     triggerTransitionEnd(element) {
@@ -24,7 +24,7 @@ const Util = (($) => { // eslint-disable-line no-shadow
           return event
             .handleObj
             .handler
-            .apply(this, arguments); // eslint-disable-line prefer-rest-params
+            .apply(this, arguments);
         }
         return undefined;
       },
@@ -48,8 +48,7 @@ const Util = (($) => { // eslint-disable-line no-shadow
   }
 
   function setTransitionEndSupport() {
-    $.fn.mmEmulateTransitionEnd = transitionEndEmulator; // eslint-disable-line no-param-reassign
-    // eslint-disable-next-line no-param-reassign
+    $.fn.mmEmulateTransitionEnd = transitionEndEmulator;
     $.event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
   }
 
